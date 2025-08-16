@@ -1,20 +1,20 @@
 public class Node {
-    int data; // The data stored in this node
+    String data; // The data stored in this node
     Node next; // Reference to the next node in the sequence
 
     // Constructor
-    public Node(int data) {
+    public Node(String data) {
         this.data = data;
         this.next = null; // Initially, no next node
     }
 
     // Getter for data
-    public int getData() {
+    public String getData() {
         return data;
     }
 
     // Setter for data
-    public void setData(int data) {
+    public void setData(String data) {
         this.data = data;
     }
 
