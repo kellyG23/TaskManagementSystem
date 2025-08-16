@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        TaskManagementSystem tms = new TaskManagementSystem();
         // LinkedList
         // Store tasks (w/ name description and priority)
         LinkedList list = new LinkedList();
@@ -14,8 +15,6 @@ public class Main {
 
         // Stack
         // Push Pop Peek
-
-
 
 
 
