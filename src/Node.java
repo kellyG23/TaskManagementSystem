@@ -18,12 +18,12 @@ public class Node {
         this.data = data;
     }
 
-    // Getter for next node
+    // Getter for the next node
     public Node getNext() {
         return next;
     }
 
-    // Setter for next node
+    // Setter for the next node
     public void setNext(Node next) {
         this.next = next;
     }

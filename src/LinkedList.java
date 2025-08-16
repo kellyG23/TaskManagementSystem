@@ -20,18 +20,30 @@ public class LinkedList {
     }
 
     void read() {
+        System.out.print("[ ");
         for (Node current = head; current != null; current = current.getNext()) {
-            System.out.println(current.getData());
+            System.out.print(current.getData() + " ");
         }
+        System.out.println("]");
     }
 
     void search(String name) {
         for (Node current = head; current != null; current = current.getNext()) {
             if (current.getData().equals(name)) {
-                System.out.println("Found " + name);
+                System.out.println(name + " found");
                 return;
             }
         }
-        System.out.println("Not found " + name);
+        System.out.println(name + " not found");
+    }
+
+    void delete(String name) {
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        else if (head.getData().equals(name)) {
+            head = head.getNext();
+            size--;
+        }
     }
 }
