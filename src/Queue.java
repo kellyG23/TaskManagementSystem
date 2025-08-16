@@ -1,2 +1,3 @@
-public class Queue {
+public class Queue extends LinkedList {
+
 }
