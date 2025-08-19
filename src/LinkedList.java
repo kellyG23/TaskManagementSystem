@@ -2,6 +2,28 @@ public class LinkedList {
     Node head = null;
     int size = 0;
 
+    /*kailangan daw ng function to add first on the line sa linkedlist para
+    mas mabilis at magawa ko yung push and pop sa stack*/
+
+    String addfirst(String item) {
+        Node newNode = new Node(item);
+        newNode.setNext(head);
+        head = newNode;
+        size++;
+        return item;
+    }
+
+    String removefirst() {
+        if (head == null) {
+            System.out.println("List is empty. Cannot remove.");
+            return null;
+        }
+        String removeData = head.getData();
+        head = head.getNext();
+        size--;
+        return removeData;
+        }
+
     void add(String name) {
         Node newNode = new Node(name);
 

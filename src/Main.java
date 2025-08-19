@@ -13,9 +13,17 @@ public class Main {
         list.delete("A");
         list.read(); // [ B ]
 
-        // Stack
-        // Push Pop Peek
-
+        System.out.println("\nStack System");
+        // Stack Push Pop Peek
+        Stack stack = new Stack();
+        stack.push("A");
+        stack.push("B");
+        System.out.println();
+        stack.peek();
+        stack.pop();
+        System.out.println();
+        stack.peek();
+        stack.pop();
 
 
         // Queue
