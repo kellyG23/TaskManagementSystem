@@ -6,10 +6,37 @@ public class TaskManagementSystem {
     public void addTask(String name, String description, int priority) {
         taskQueue.enqueue(name, description, priority);
     }
+    public void addTask(String name, String description) {
+        int priority = 0;
+        taskQueue.enqueue(name, description, priority);
+    }
+    public void addTask(String name, int priority) {
+        String description = "No description";
+        taskQueue.enqueue(name, description, priority);
+    }
+    public void addTask(String name) {
+        int priority = 0;
+        String description = "No description";
+        taskQueue.enqueue(name, description, priority);
+    }
     
     public void pushTask(String name, String description, int priority) {
         taskStack.push(name, description, priority);
     }
+    public void pushTask(String name, String description) {
+        int priority = 0;
+        taskStack.push(name, description, priority);
+    }
+    public void pushTask(String name, int priority) {
+        String description = "No description";
+        taskStack.push(name, description, priority);
+    }
+    public void pushTask(String name) {
+        int priority = 0;
+        String description = "No description";
+        taskStack.push(name, description, priority);
+    }
+
 
     // Pop and Dequeue
     public void taskFinished() {

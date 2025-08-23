@@ -24,13 +24,13 @@ public class Main {
 
         // Adding Tasks (Queue)
         tms.addTask("Task 1", "Laundy", 3);
-        tms.addTask("Task 2", "Cleaning", 2);
-        tms.addTask("Task 3", "Cooking", 1);
+        tms.addTask("Task 2", 2); // No description: description = No description
+        tms.addTask("Task 3", "Cooking"); // No priority number: priority = 0
 
         // Pushing Tasks (Stack)
         tms.pushTask("Task 1", "Assignment 1", 1);
-        tms.pushTask("Task 2", "Group Project", 2);
-        tms.pushTask("Task 3", "Kuromi", 3);
+        tms.pushTask("Task 2", 2); // No description: description = No description
+        tms.pushTask("Task 3", "Kuromi"); // No priority number: priority = 0
 
         // Reading Tasks
         tms.readTasks();
