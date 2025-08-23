@@ -33,29 +33,4 @@ public class Node {
         this.priority = 0;
         this.next = null; // Initially, no next node
     }
-
-    // Getter for task
-    public String getTask() {
-        return task;
-    }
-
-    // Getter for description
-    public String getDescription() {
-        return description;
-    }
-
-    // Getter for priority
-    public int getPriority() {
-        return priority;
-    }
-
-    // Getter for the next node
-    public Node getNext() {
-        return next;
-    }
-
-    // Setter for the next node
-    public void setNext(Node next) {
-        this.next = next;
-    }
 }
