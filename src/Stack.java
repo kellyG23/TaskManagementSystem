@@ -1,32 +1,31 @@
-public class Stack {
-    private LinkedList list;
+public class Stack extends LinkedList{
+    public void push(String name, String description, int priority) {
+        Node newNode = new Node(name, description, priority);
 
-    public Stack() {
-        list = new LinkedList();
+        if (head == null) {
+            head = newNode;
+        }
+        else {
+            newNode.next = head;
+            head = newNode;
+        }
     }
 
-    public void push(String item) {
-        list.addfirst(item);
-        System.out.println("Pushed: " + item);
+    public Node pop() {
+        return delete();
     }
-    public String pop() {
-        if(list.size == 0) {
-            System.out.println("Stack is empty. Cannot pop");
+
+    public Node peek() {
+        if (head == null) {
+            System.out.println("Stack is empty, nothing to peek.");
             return null;
         }
 
-        String poppedData = list.removefirst();
-        System.out.println("Popped: " + poppedData);
-        return poppedData;
+        return head;
     }
-    public String peek() {
-        if(list.size == 0) {
-            System.out.println("Stack is empty.");
-            return null;
-        }
-        String peekData = list.head.getData();
-        System.out.println("Peeked: " + peekData);
-        return peekData;
+
+    public boolean isEmpty() {
+        return head == null;
     }
 }
 

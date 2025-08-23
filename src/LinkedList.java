@@ -2,9 +2,6 @@ public class LinkedList {
     Node head = null;
     int size = 0;
 
-    /*kailangan daw ng function to add first on the line sa linkedlist para
-    mas mabilis at magawa ko yung push and pop sa stack*/
-
     String addfirst(String item) {
         Node newNode = new Node(item);
         newNode.setNext(head);
@@ -18,54 +15,44 @@ public class LinkedList {
             System.out.println("List is empty. Cannot remove.");
             return null;
         }
-        String removeData = head.getData();
+        String removeData = head.getTask();
         head = head.getNext();
         size--;
         return removeData;
-        }
+    }
 
-    void add(String name) {
-        Node newNode = new Node(name);
+    void add(String task, String description, int priority) {
+        Node newNode = new Node(task, description, priority);
 
         if (head == null) {
             head = newNode;
         }
+
         else {
             Node current = head;
-            while (current.getNext() != null) {
-                current = current.getNext();
+            while (current.next != null) {
+                current = current.next;
             }
-            current.setNext(newNode);
+            current.next = newNode;
         }
-
-        size++;
     }
 
-    void read() {
-        System.out.print("[ ");
-        for (Node current = head; current != null; current = current.getNext()) {
-            System.out.print(current.getData() + " ");
-        }
-        System.out.println("]");
+    public Node delete() {
+        if (head == null)
+            return null;
+
+        Node current = head;
+        head = head.next;
+        return current;
     }
 
-    void search(String name) {
-        for (Node current = head; current != null; current = current.getNext()) {
-            if (current.getData().equals(name)) {
-                System.out.println(name + " found");
-                return;
-            }
+    public void read() {
+        Node current = head;
+        while (current != null) {
+            System.out.println("Task: " + current.task + ", Description: " + current.description + ", Priority: " +
+                    current.priority);
+            current = current.next;
         }
-        System.out.println(name + " not found");
-    }
-
-    void delete(String name) {
-        if (head == null) {
-            System.out.println("List is empty");
-        }
-        else if (head.getData().equals(name)) {
-            head = head.getNext();
-            size--;
-        }
+        System.out.println();
     }
 }

@@ -1,33 +1,52 @@
 public class Main {
     public static void main(String[] args) {
         TaskManagementSystem tms = new TaskManagementSystem();
-        // LinkedList
-        // Store tasks (w/ name description and priority)
-        LinkedList list = new LinkedList();
 
-        // insertion, reading, deletion, searching
-        list.add("A");
-        list.add("B");
-        list.read(); // [ A B ]
-        list.search("ABC"); // ABC not found
-        list.delete("A");
-        list.read(); // [ B ]
+        // Empty Stacks and Queue
+        tms.readTasks();
+        System.out.println("-------------------");
 
-        System.out.println("\nStack System");
-        // Stack Push Pop Peek
-        Stack stack = new Stack();
-        stack.push("A");
-        stack.push("B");
-        System.out.println();
-        stack.peek();
-        stack.pop();
-        System.out.println();
-        stack.peek();
-        stack.pop();
+        // Empty Peek
+        tms.peekTask();
+        System.out.println("-------------------");
 
+        // Empty Read
+        tms.readTasks();
+        System.out.println("-------------------");
 
-        // Queue
-        // Extends LinkedList
-        // Queue Dequeue
+        // Empty Task in Queue Completion
+        tms.taskFinished();
+        System.out.println("-------------------");
+
+        // Empty Task in Stack Completion
+        tms.removeTask();
+        System.out.println("-------------------");
+
+        // Adding Tasks (Queue)
+        tms.addTask("Task 1", "Laundy", 3);
+        tms.addTask("Task 2", "Cleaning", 2);
+        tms.addTask("Task 3", "Cooking", 1);
+
+        // Pushing Tasks (Stack)
+        tms.pushTask("Task 1", "Assignment 1", 1);
+        tms.pushTask("Task 2", "Group Project", 2);
+        tms.pushTask("Task 3", "Kuromi", 3);
+
+        // Reading Tasks
+        tms.readTasks();
+        System.out.println("-------------------");
+
+        // Task Completion (Queue)
+        tms.taskFinished();
+        tms.taskFinished();
+        tms.readTasks();
+        System.out.println("-------------------");
+
+        // Task Completion (Stack)
+        tms.removeTask();
+        tms.removeTask();
+        tms.readTasks();
+        System.out.println("-------------------");
+
     }
 }
