@@ -47,6 +47,5 @@ public class Main {
         tms.removeTask();
         tms.readTasks();
         System.out.println("-------------------");
-
     }
 }

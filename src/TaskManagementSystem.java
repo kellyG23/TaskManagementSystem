@@ -37,7 +37,6 @@ public class TaskManagementSystem {
         taskStack.push(name, description, priority);
     }
 
-
     // Pop and Dequeue
     public void taskFinished() {
         Node task = taskQueue.dequeue();
